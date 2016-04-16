@@ -1,6 +1,6 @@
 body{
 	font-size: 14px;
-    	font-family: "Open Sans",arial,sans-serif;
+    font-family: "Open Sans",arial,sans-serif;
 	background-color: #DD3F3F; 
 	line-height: 1.6;
 	margin: 0;
@@ -68,10 +68,9 @@ header{
 	position: relative;
 	float: left;
 	margin: 0 5%;
-	padding:25px;
 	background-color: #FFFEFE;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	height: 1400px;
+	height: 1650px;
 	width: 90%;
 }
 
@@ -105,61 +104,82 @@ header{
     border: 2px solid #DD3F3F;
 }
 
+.sns{
+	position: relative;
+	float: right;
+	width: 15%;
+	height: 50px;
+}
 .sns img{
 	width:40px;
 	height: 40px;
 }
 
-.t02{
-	width = 100%;
-}
-
-.t02 th,td img{
-	margin:10px 10px 10px 120px;  
-	width :155px;
-	height:140px;
-}
-
-
-#t01 {
-	margin-top: 50px;
-	margin-left: 5%;
-	margin-right: 5%;
+.sub2{
 	position: relative;
-	border: 1px none black;
-	border-collapse: collapse;
-	font-family: sans-serif ;
-	color: #2B2A2A;
-
+	float: left;
+	width: 100%;
+	height: 250px;
 }
 
-#t01 th, td{
-	padding: 10px;
-	width: 1000px;
-}
-
-#t01 tr:nth-child(even) {
-    background-color: #D6D6D6;
-    text-align: center;
-}
-#t01 tr:nth-child(odd) {
-   background-color:#fff;
-   text-align: center;
-
-}
-
-#t01 th	{
-    background-color: #DD3F3F;
-    color: white;
+.sub2 img{
+	margin:25px 10px 20px 160px;  
+	padding:15px;
+	width :145px;
+	height:130px;
 }
 
 
 p.one {
+	margin:35px;
 	text-align:justify;
 	font-size:130%;
 }
 p.two {
-	text-align:center;
+	position: relative;
+	float: left;
+	width: 20%;
+	margin:0px 10px 10px 110px;
+	text-align:justify;
+	font-size:105%;
+}
+p.three {
+	position: relative;
+	float: left;
+	text-align: right;
+	width: 85%;
+	height: 50px;
+	margin:10px 0px 0px 0px;
+	font-size:105%;
+}
+p.four {
+	position: relative;
+	float: left;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	margin:25px;
 	font-size:105%;
 }
 
+.bar{
+	position: relative;
+	float: left;
+	width: 1166px;
+	height: 30px;
+	padding: 0 25px;
+	background-color: #0b3136;
+
+}
+
+.bar a{
+	height: 30px;
+	color: #FFFEFE;
+	text-decoration: none;
+	padding: 4px 20px 6px;
+	font-size: 18px;
+}
+
+.bar a:hover{
+	background-color: #507e8d;
+}

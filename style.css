@@ -35,6 +35,7 @@ header{
 	width: auto;
 	height: 640px;
 }
+
 .imagen-central img{
 	width: 100%;
 	height: 100%;
@@ -70,8 +71,8 @@ header{
 	margin: 0 5%;
 	background-color: #FFFEFE;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	height: 1650px;
-	width: 90%;
+	height: 1420px;
+	width: 1220px;
 }
 
 .panel{
@@ -104,20 +105,6 @@ header{
     border: 2px solid #DD3F3F;
 }
 
-.sns{
-	position: relative;
-	float: right;
-	width: 15%;
-	height: 50px;
-}
-.sns img{
-	width:40px;
-	height: 40px;
-}
-.sns img:hover{
-	opacity: 0.7;
-}
-
 
 .sub2{
 	position: relative;
@@ -139,6 +126,7 @@ p.one {
 	text-align:justify;
 	font-size:130%;
 }
+
 p.two {
 	position: relative;
 	float: left;
@@ -147,43 +135,72 @@ p.two {
 	text-align:justify;
 	font-size:105%;
 }
-p.three {
-	position: relative;
-	float: left;
-	text-align: right;
-	width: 85%;
-	height: 50px;
-	margin:10px 0px 0px 0px;
-	font-size:105%;
-}
-p.four {
-	position: relative;
-	float: left;
-	text-align: center;
-	width: 100%;
-	height: 50px;
-	margin:25px;
-	font-size:105%;
-}
+
 
 .bar{
 	position: relative;
+	margin: 0 5%;
 	float: left;
-	width: 1166px;
-	height: 30px;
-	padding: 0 25px;
-	background-color: #0b3136;
+	width: 1220px;
+	height: 50px;
+	background-color: #2B2A2A;
 
 }
 
-.bar a{
-	height: 30px;
+.redes img{
+	position: relative;
+	float: right;
+	margin-right: 8px;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+}
+
+.redes img:hover{
+	opacity: 0.7;
+}
+
+/*.botones a{
+	position: relative;
 	color: #FFFEFE;
 	text-decoration: none;
-	padding: 4px 20px 6px;
+	padding: 4px 20px 16px;
 	font-size: 18px;
 }
 
-.bar a:hover{
-	background-color: #507e8d;
+.botones a:hover{
+	background-color: #DD3F3F;
+}
+*/
+
+.t01 {
+	margin-top: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
+	position: relative;
+	border: 1px none black;
+	border-collapse: collapse;
+	font-family: sans-serif ;
+	color: #2B2A2A;
+
+}
+
+.t01 th, td{
+	padding: 10px;
+	width: 1000px;
+}
+
+.t01 tr:nth-child(even) {
+    background-color: #D6D6D6;
+    text-align: center;
+}
+.t01 tr:nth-child(odd) {
+   background-color:#fff;
+   text-align: center;
+
+}
+
+.t01 th	{
+    background-color: #DD3F3F;
+    color: white;
 }

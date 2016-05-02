@@ -225,10 +225,11 @@ p.two {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+    border: 2px solid #DD3F3F;
 }
+
 
 .boton-admin:hover {
     background-color: #FFFEFE; 
     color: black; 
-    border: 2px solid #DD3F3F;
-}
+}    

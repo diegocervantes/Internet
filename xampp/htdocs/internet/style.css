@@ -1,27 +1,27 @@
 body{
-	font-size: 14px;
+    font-size: 14px;
     font-family: "Open Sans",arial,sans-serif;
-	background-color: #DD3F3F; 
-	line-height: 1.6;
-    width: 1350px;
-	margin: 0;
+    background-color: #DD3F3F; 
+    line-height: 1.6;
+    width: 100%;
+    margin: 0;
 }
 
 header{
-	position: relative;
-	margin: 0 0%;
-	background-color: #EAEAEA;
-	
-	width: 1350px;
-	height: 95px;
-	z-index: 1;
+    position: relative;
+    margin: 0 0%;
+    background-color: #EAEAEA;
+    
+    width: 100%;
+    height: 95px;
+    z-index: 1;
 }
 
 .logo{
-	float: left;
-	padding: 7.5px 40px; 
-	width: auto;
-	height: 80px;
+    float: left;
+    padding: 7.5px 40px; 
+    width: auto;
+    height: 80px;
 }
 
 .logo img{
@@ -29,6 +29,35 @@ header{
     height: 100%;
 }
 
+.login{
+    float: right;
+    padding: 7.5px 40px; 
+    font-size: 16px;
+    width: auto;
+    height: 80px;
+}
+
+.login input[type="text"], input[type="password"]{
+    float: right;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 16px;
+}
+
+.login input[type="submit"]{
+    float: right;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 16px;
+    color: #FFFEFE;
+    width: 119px;
+    background-color: #DD3F3F;
+    border-color: #DC3E3E;
+    font-size: 16px;
+}
+.login input[type="submit"]:hover{
+    border-color: #5F2A2A;  
+}
 .topbar{
     position: relative;
     float: left;
@@ -42,31 +71,31 @@ header{
 
 .links-top{
     float: left;
-    height: 30px;
+    height: 100%;
     padding: 0 25px;
 }
 
 .links-top a{
-	height: 30px;
-	color: #FFFEFE;
+    height: 30px;
+    color: #FFFEFE;
     background-color: #2B2A2A;
-	text-decoration: none;
-	padding: 4px 20px 6px;
-	font-size: 18px;
+    text-decoration: none;
+    padding: 4px 20px 6px;
+    font-size: 18px;
 }
 
 .links-top a:hover{
-	background-color: #303e57;
+    background-color: #303e57;
 }
 
 .contenido{
-	position: relative;
-	float: left;
-	margin: 0 5%;
-	background-color: #FFFEFE;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	height: 1420px;
-	width: 90%;
+    position: relative;
+    float: left;
+    margin: 0 5%;
+    background-color: #FFFEFE;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100%;
+    width: 90%;
 }
 
 .bottomBar{
@@ -102,12 +131,12 @@ header{
     text-align: center;
     padding: 45px; 
     width: auto;
-    height: 640px;
+    height: auto;
 }
 
 .img-central img{
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .inicio-central p{
@@ -138,21 +167,21 @@ header{
 
     padding:15px;
     width :auto;
-    height:130px;
+    height:auto;
 }
 
 .sub-img img{
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 
 
 .sub2{
-	position: relative;
-	float: left;
-	width: 100%;
-	height: 250px;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 250px;
 }
 
 .sub2 img{
@@ -160,12 +189,12 @@ header{
 }
 
 p.two {
-	position: relative;
-	float: left;
-	width: 20%;
-	margin:0px 10px 10px 110px;
-	text-align:justify;
-	font-size:105%;
+    position: relative;
+    float: left;
+    width: 20%;
+    margin:0px 10px 10px 110px;
+    text-align:justify;
+    font-size:105%;
 }
 
 
@@ -174,19 +203,19 @@ p.two {
 
 /*ASISTENCIA*/
 .t01 {
-	margin-top: 50px;
-	margin-left: 5%;
-	margin-right: 5%;
-	position: relative;
-	border: 1px none black;
-	border-collapse: collapse;
-	font-family: sans-serif ;
-	color: #2B2A2A;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    border: 1px none black;
+    border-collapse: collapse;
+    font-family: sans-serif ;
+    color: #2B2A2A;
 }
 
 .t01 th, td{
-	padding: 10px;
-	width: 1000px;
+    padding: 10px;
+    width: 1000px;
 }
 
 .t01 tr:nth-child(even) {
@@ -199,7 +228,7 @@ p.two {
 
 }
 
-.t01 th	{
+.t01 th {
     background-color: #DD3F3F;
     color: white;
 }

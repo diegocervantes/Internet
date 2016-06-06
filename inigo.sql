@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2016 a las 05:48:13
+-- Tiempo de generación: 06-06-2016 a las 06:23:20
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -83,7 +83,7 @@ CREATE TABLE `empleados` (
   `password` varchar(20) NOT NULL,
   `fecha_nacimiento` varchar(10) NOT NULL,
   `dni` int(8) NOT NULL,
-  `ingreso_area` varchar(10) NOT NULL,
+  `ingreso` int(4) NOT NULL,
   `email` varchar(30) NOT NULL,
   `telefono` int(9) NOT NULL,
   `celular` int(9) NOT NULL

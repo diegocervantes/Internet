@@ -11,7 +11,6 @@ header{
     position: relative;
     margin: 0 0%;
     background-color: #EAEAEA;
-    
     width: 100%;
     height: 95px;
     z-index: 1;
@@ -47,16 +46,19 @@ header{
 .login input[type="submit"]{
     float: right;
     border-style: solid;
+    border-radius: 5px 5px 5px 5px;
     border-width: 2px;
     font-size: 16px;
+    margin-top: 20%;
     color: #FFFEFE;
-    width: 119px;
+    width: 129px;
+    height: 40px;
     background-color: #DD3F3F;
-    border-color: #DC3E3E;
+    border-color: #DD3F3F;
     font-size: 16px;
 }
 .login input[type="submit"]:hover{
-    border-color: #5F2A2A;  
+    border-color: #2B2A2A;  
 }
 .topbar{
     position: relative;
@@ -85,7 +87,7 @@ header{
 }
 
 .links-top a:hover{
-    background-color: #303e57;
+    background-color: #DD3F3F;
 }
 
 .contenido{
@@ -234,6 +236,85 @@ p.two {
 }
 
 /*ADMIN*/
+
+.subdivision{
+    background-color: #AEAEAE;
+    position: relative;
+    float: left;
+    margin: 1% 1%;
+    height: 100%;
+    width: 28%;
+
+}
+
+.subdivision p{
+    text-align: center;
+    padding: 5%;
+}
+
+.subdivision2{
+    background-color: #AEAEAE;
+    position: relative;
+    float: right;
+    margin: 1% 1%;
+    height: 100%;
+    width: 68%;
+
+}
+
+.subdivision2 p{
+    font-size: 20px;
+}
+
+.formulario-input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #808080;
+    width: 90%;
+}
+
+.formulario-header{
+    height: 80px;
+    font-family: sans-serif;
+    color: #fff;
+    background-color: #DD3F3F;
+    padding: 0.01em 16px;
+    text-align: center;
+    font-size: 22px ;
+
+}
+
+.btn{
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none!important;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color: #DD3F3F;
+    padding: 8px 16px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+    transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+}
+
+
+.formulario-container {
+    padding: 0.01em 16px;
+}
+    
 .panel-admin{
     text-align: center;
     font-size: 25px;
@@ -255,6 +336,7 @@ p.two {
     transition-duration: 0.4s;
     cursor: pointer;
     border: 2px solid #DD3F3F;
+
 }
 
 

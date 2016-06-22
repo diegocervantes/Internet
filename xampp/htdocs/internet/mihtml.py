@@ -23,11 +23,7 @@ def header():
             <a href="inicio.py"><img src="logo.png" alt="iniGo"></a>
         </div>
         <div class="login">
-            Usuario: 
-            <input type="text" maxlength="10" size="10" name="usuario"></br>
-            Contrasena:
-            <input type="password" maxlength="10" size="10" name="password"></br>
-            <input type="submit" name="enviar" value="Ingresar">
+            <input type="submit" name="Iniciar sesion" value="Iniciar Sesion">
         </div>
     </header>
     """

@@ -15,6 +15,21 @@ def head(nombre):
     </head>
     """
 
+def login():
+    print """
+    <div class="login">
+        <input type="submit" name="Iniciar sesion" value="Iniciar Sesion">
+    </div>
+    """
+
+    # <div class="login">
+    #     Usuario: 
+    #     <input type="text" maxlength="10" size="10" name="usuario"></br>
+    #     Contrasena:
+    #     <input type="password" maxlength="10" size="10" name="password"></br>
+    #     <input type="submit" name="enviar" value="Ingresar">
+    # </div>
+
 def header():
     print"""
     <body>
@@ -22,11 +37,13 @@ def header():
         <div class="logo">
             <a href="inicio.py"><img src="logo.png" alt="iniGo"></a>
         </div>
-        <div class="login">
-            <input type="submit" name="Iniciar sesion" value="Iniciar Sesion">
-        </div>
+    """
+    login()
+    print """
     </header>
     """
+
+    
 def topbar():
     print"""
         <div class="topbar">

@@ -27,15 +27,14 @@ print"""
         standards on common container technologies among the developer community in deploying cloud native applications.</p>
 	</div>"""
 
-j =0 
-for p in imagenes:
+for (i,s) in zip(imagenes, subs):
 	print"""
 	<div class="inicio-sub">
-		<div class="sub-img"><img src=""",p,""" alt="imagen" ></div>
-		<p >""", subs[j] ,"""</p>
+		<div class="sub-img"><img src=""",i,""" alt="imagen" ></div>
+		<p >""", s ,"""</p>
 	</div>
 	"""
-	j = j+1
+
 print"""
 </div>
 """

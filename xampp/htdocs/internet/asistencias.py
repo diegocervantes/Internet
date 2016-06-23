@@ -25,20 +25,18 @@ print"""
             <th>Asistio</th>
         </tr>
         """
-j = 0
-for i in nombres:
+for (n,a,f) in zip(nombres, areas, faltas):
     print"""
-        <tr>"""
-    print"""
+        <tr>
             <td>
             <img src = inicio/loro.jpg width=100 height = 100 alt = ""></td>
-            <td>""",i,"""</td>      
-            <td>""",areas[j],"""</td>
-            <td>""",faltas[j],"""</td>
+            <td>""",n,"""</td>      
+            <td>""",a,"""</td>
+            <td>""",f,"""</td>
             <td>/</td>
         </tr>
         """
-    j = j+1
+#arriba reemplazamos n, a y f por la base de datos
 print"""
     </table>
 </div>

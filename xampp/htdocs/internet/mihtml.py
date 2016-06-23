@@ -49,10 +49,9 @@ def topbar():
         <div class="topbar">
         <div class="links-top">
         """
-    j = 0
-    for i in etiquetas:
-        print"<a href=",enlaces[j],"  title=",i,"> ",i,"</a>"
-        j = j+1
+
+    for (i,j) in zip(etiquetas, enlaces):
+        print"<a href=",j,"  title=",i,"> ",i,"</a>"
 
     print """ 
         </div>

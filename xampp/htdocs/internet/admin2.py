@@ -6,15 +6,11 @@ import cgitb; cgitb.enable()
 import mysql.connector
 import re
 
-
-
 print("Content-Type: text/html\n")
 
 db= mysql.connector.connect(user='root', password='',
                               host='127.0.0.1',
                               database='inigo')
-
-
 
 t1 = ["Gestion de Areas","Gestion de empleados", "Cerrar Sesion"]
 t2 = ["admin.py","admin2.py","inicio.py"]
@@ -31,17 +27,15 @@ print"""
             <p>Administrar Areas</p>
         </div>
         """
-j=0
-for i in t1:    
+
+for (i,j) in zip(t1,t2):    
     print"""
         <p>
-            <td><a href=" """,t2[j],""" " class="boton-admin">""",i,"""</a></td>
+            <td><a href=" """,j,""" " class="boton-admin">""",i,"""</a></td>
         </p>
         """
-    j+=1
-    
+
 print"""
-        </table>
     </div>
 """
 

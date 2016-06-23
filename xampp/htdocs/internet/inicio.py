@@ -1,5 +1,5 @@
 #!C:\Python27\python
-#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import mihtml
 print("Content-Type: text/html\n")

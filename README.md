@@ -1,14 +1,4 @@
-	
-
-	INTERNET
-
-#########################
-#			#
-#			#
-#	INTERNET	#
-#    DIEGO CERVANTES	#
-#     FREDY ALVAREZ	#
-#      MAURO DIAZ	#
-#			#
-#			#
-#########################
+# INTERNET
+* DIEGO CERVANTES
+* FREDY ALVAREZ
+* MAURO DIAZ

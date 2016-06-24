@@ -11,7 +11,7 @@ asistencias = ["Si","No","-"]
 
 mihtml.head("Asistencias")
 mihtml.header(True)
-mihtml.topbar()
+
 
 print"""
 <div class="contenido">

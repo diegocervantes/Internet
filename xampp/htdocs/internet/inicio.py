@@ -11,7 +11,7 @@ subs = ["We strive to provide best-in-class advice and execution excellence on t
  		"Our Technology, Media and Telecommunications group provides insights and services covering a wide range of industries from electronics to software	to Internet to wireless and cable companies."]
 
 mihtml.head("Inicio")
-mihtml.header()
+mihtml.header(False)
 mihtml.topbar()
 
 print"""

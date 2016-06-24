@@ -18,7 +18,7 @@ t1 = ["Gestion de Areas","Gestion de empleados", "Cerrar Sesion"]
 t2 = ["admin.py","admin2.py","inicio.py"]
 
 mihtml.head("Admin")
-mihtml.header()
+mihtml.header(True)
 mihtml.topbar()
 
 print"""

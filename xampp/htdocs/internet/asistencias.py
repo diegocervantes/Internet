@@ -10,7 +10,7 @@ faltas = [50,94,80]
 asistencias = ["Si","No","-"]
 
 mihtml.head("Asistencias")
-mihtml.header()
+mihtml.header(True)
 mihtml.topbar()
 
 print"""

@@ -19,7 +19,6 @@ t2 = ["admin.py","admin2.py","inicio.py"]
 
 mihtml.head("Admin")
 mihtml.header(True)
-mihtml.topbar()
 
 print"""
 <div class="contenido">

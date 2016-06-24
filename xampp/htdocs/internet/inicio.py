@@ -12,7 +12,7 @@ subs = ["We strive to provide best-in-class advice and execution excellence on t
 
 mihtml.head("Inicio")
 mihtml.header(False)
-mihtml.topbar()
+
 
 print"""
 <div class="contenido">

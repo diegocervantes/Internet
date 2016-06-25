@@ -73,13 +73,16 @@ print"""
 
             </form>
 """
+
 form = cgi.FieldStorage() 
+
 
 usuario = form.getfirst('usuario', 'empty')
 password = form.getfirst('password', 'empty')
 area = form.getfirst('area', 'empty')
 descripcion = form.getfirst('descripcion', 'empty')
 jefe = form.getfirst('jefe', 'empty')
+
 
 usuario = cgi.escape(usuario)
 password = cgi.escape(password)

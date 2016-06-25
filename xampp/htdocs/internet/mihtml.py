@@ -36,18 +36,18 @@ def head(nombre):
     """
 
 def login():
-	print	"""
-	<div class = "login">
-		<form action="" method="post" name="miform">
-    	Usuario:
-    	<input type="text" maxlength="11" size="10" name="usuario" id=usuario></br>
-    	Password:
-    	<input type="password" maxlength="20" size="10" name="password" id=password></br>
-    	<input type="button" name="enviar" value="enviar" onClick="getData();">
-    	<div id="contenido"></div>
-	</form>
-	</div>
-"""	
+    print   """
+    <div class = "login">
+        <form action="" method="post" name="miform">
+        Usuario:
+        <input type="text" maxlength="11" size="10" name="usuario" id=usuario></br>
+        Password:
+        <input type="password" maxlength="20" size="10" name="password" id=password></br>
+        <input type="button" name="enviar" value="enviar" onClick="getData();">
+        <div id="contenido"></div>
+    </form>
+    </div>
+""" 
 
     # <div class="login">
     #     Usuario: 
@@ -80,6 +80,8 @@ def header(valor):
     </header>
     """
     
+
+    
 def topbar():
     print"""
         <div class="topbar">
@@ -107,3 +109,4 @@ def bottombar():
     </body>
     </html> 
     """
+

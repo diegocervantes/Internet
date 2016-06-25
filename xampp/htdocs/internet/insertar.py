@@ -20,6 +20,8 @@ existe.execute("SELECT * FROM `admin` WHERE `user` = '%s'" % (usuario))
 resultado = existe.fetchall()
 existe.execute("SELECT * FROM `admin` WHERE `password` = '%s'" % (password))
 resultado2 = existe.fetchall()
+
+
 if(len(resultado) != 0 and len(resultado2) != 0):
   print ("Login ADMIN")
   print ("""<meta http-equiv="refresh" content="0;url=http://localhost/internet/admin.py">""")
@@ -29,6 +31,7 @@ else:
 	existe.execute("SELECT * FROM `areas` WHERE `password` = '%s'" % (password))
 	resultado2 = existe.fetchall()
 	if(len(resultado) != 0 and len(resultado2) != 0):
+		print resultado[0][0]
 		print ("Login JEFE DE AREA")
 		print ("""<meta http-equiv="refresh" content="0;url=http://localhost/internet/asistencias.py">""")
 	else:

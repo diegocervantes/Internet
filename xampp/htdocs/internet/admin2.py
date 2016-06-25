@@ -19,6 +19,7 @@ mihtml.head("Admin")
 mihtml.header(True)
 
 
+
 print"""
 <div class="contenido">
     <div class="subdivision">
@@ -38,6 +39,12 @@ for (i,j) in zip(t1,t2):
 print"""
     </div>
 """
+
+cursor=db.cursor()
+sql = "Select * From areas"
+cursor.execute(sql)
+resultado = cursor.fetchall()
+
 
 print"""
     <div class="subdivision2">
@@ -83,11 +90,28 @@ print"""
                     <input class="formulario-input" style="resize:none" name="celular"></input> 
                 </p>
                 <p>
+                    <label class="formulario-text-grey">Area:</label>
+                    <input class="formulario-input" style="resize:none" name="area" list="areas">
+                        <datalist id="areas">
+                    """
+for r in resultado:
+    print """
+                            <option value=" """ ,r[0], """ ">""",r[3],"""</option>        
+    """
+print """               </datalist>"""
+
+
+print """
+                </p>
+                <p>
+
                 <input class="btn" type="submit" name="enviar" value="enviar">
                 </p>
 
             </form>
 """
+
+
 form = cgi.FieldStorage() 
 
 usuario = form.getfirst('usuario', 'empty')
@@ -99,6 +123,15 @@ ingreso = form.getfirst('ingreso', 'empty')
 email = form.getfirst('email', 'empty')
 telefono = form.getfirst('telefono', 'empty')
 celular = form.getfirst('celular', 'empty')
+area = form.getfirst('area','empty')
+
+# area1 = area
+
+# for r in resultado:
+#     print r[3]
+#     if(area == r[3]):
+#         area = r[0]
+
 
 usuario = cgi.escape(usuario)
 nombre = cgi.escape(nombre)
@@ -109,6 +142,7 @@ ingreso = cgi.escape(ingreso)
 email = cgi.escape(email)
 telefono = cgi.escape(telefono)
 celular = cgi.escape(celular)
+area = cgi.escape(area)
 
 usuarioM = False
 nombreM = False
@@ -119,7 +153,7 @@ ingresoM = False
 emailM = False
 telefonoM = False
 celularM = False
-
+areaM = False
 
 if( usuario != 'empty' and nombre != 'empty' and password != 'empty' and nacimiento != 'empty' and dni != 'empty' 
     and ingreso != 'empty' and email != 'empty' and telefono != 'empty' and celular != 'empty'):
@@ -156,7 +190,6 @@ if( usuario != 'empty' and nombre != 'empty' and password != 'empty' and nacimie
 
     if re.match("[0-9\-]{9,}",celular):
         celularM = True 
-        print"Celular: SI</br>"
         r = ""
         for i in celular:
             if(i != '-'):
@@ -171,11 +204,11 @@ if( usuario != 'empty' and nombre != 'empty' and password != 'empty' and nacimie
         if(len(resultado) != 0):
             print("Ya hay un usuario registrado con el mismo codigo")
         else:
-            insertar=db.cursor()     
+            insertar=db.cursor()  
             valores =("""INSERT INTO `empleados` (`id`, `codigo`, `user`, `nombre`, `password`, `fecha_nacimiento`, 
-                        `dni`, `ingreso`, `email`, `telefono`, `celular`) 
-                        VALUES (NULL, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')""" % 
-                        (usuario, usuario, nombre, password, nacimiento, dni, ingreso, email, telefono, celular))
+                        `dni`, `ingreso`, `email`, `telefono`, `celular`,`area_id`) 
+                        VALUES (NULL, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s','%s')""" % 
+                        (usuario, usuario, nombre, password, nacimiento, dni, ingreso, email, telefono, celular,area))
             insertar.execute(valores)
             db.commit()   
             print ("ID de ultimo registro insertado: %s<br>" % insertar.lastrowid)
@@ -201,6 +234,8 @@ if( usuario != 'empty' and nombre != 'empty' and password != 'empty' and nacimie
             print "<p>Celular Invalido</p>"
 else:
     print "<p>No ha ingresado algun campo</p>"
+
+
 print"""
     </div>    
 </div>

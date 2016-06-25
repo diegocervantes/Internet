@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2016 a las 17:53:52
+-- Tiempo de generación: 25-06-2016 a las 02:31:23
 -- Versión del servidor: 10.1.13-MariaDB
--- Versión de PHP: 5.6.21
+-- Versión de PHP: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -62,7 +62,7 @@ INSERT INTO `areas` (`id`, `user`, `password`, `nombre_area`, `descripcion`, `je
 (1, 'juan', '321', 'Limpieza', 'Limpiar todas las salas', 'Jose Robles'),
 (2, 'INT-2016-01', 'holaA-=', 'Anatomia', 'Esta area es chevere', 'Juanito '),
 (4, 'ANT-1998-01', 'Axd09./', 'Oficinas', 'bla bla bla bla', 'Jose Bernardo'),
-(5, 'INT-2016-02', '13123AS-[', 'Carbonería', 'nada', 'Rosa Beltr?n');
+(5, 'INT-2016-02', '13123AS-[', 'Carboneria', 'nada', 'Rosa Beltr?n');
 
 -- --------------------------------------------------------
 
@@ -96,19 +96,19 @@ CREATE TABLE `empleados` (
   `ingreso` year(4) NOT NULL,
   `email` varchar(30) NOT NULL,
   `telefono` varchar(13) NOT NULL,
-  `celular` varchar(13) NOT NULL
+  `celular` varchar(13) NOT NULL,
+  `area_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `empleados` (`id`, `codigo`, `user`, `nombre`, `password`, `fecha_nacimiento`, `dni`, `ingreso`, `email`, `telefono`, `celular`) VALUES
-(1, '123', '', '', '', '0000-00-00', '0', 0000, '', '0', '0'),
-(2, '123', '', '', '', '0000-00-00', '0', 0000, '', '0', '0'),
-(3, '312', '312', '312', '312', '0000-00-00', '312', 0000, '312', '312', '312'),
-(4, 'INT-45628-2016-01', 'INT-45628-2016-01', 'Pancho Rodriguez', 'aleluya123A-&gt;', '0000-00-00', '71440896', 2006, 'pancho@inigo.com', '54272222', '978767562'),
-(5, 'PAS-45628-2016-01', 'PAS-45628-2016-01', 'Rodrigo abd', 'asdhQ-;', '0000-00-00', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309');
+INSERT INTO `empleados` (`id`, `codigo`, `user`, `nombre`, `password`, `fecha_nacimiento`, `dni`, `ingreso`, `email`, `telefono`, `celular`, `area_id`) VALUES
+(4, 'INT-45628-2016-01', 'INT-45628-2016-01', 'Pancho Rodriguez', 'aleluya123A-&gt;', '0000-00-00', '71440896', 2006, 'pancho@inigo.com', '54272222', '978767562', 0),
+(5, 'PAS-45628-2016-01', 'PAS-45628-2016-01', 'Rodrigo abd', 'asdhQ-;', '0000-00-00', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 0),
+(24, 'ASD-23435-2016-01', 'ASD-23435-2016-01', 'Mauro Diaz', 'Comexd%$12', '1997-08-26', '72345667', 2015, 'diego@cst.com', '54234354', '953245345', 1),
+(25, 'AED-21435-2016-01', 'AED-21435-2016-01', 'Diego Cervantes', '19Dc#$56$xfa', '1997-08-26', '77151234', 2015, 'diegoxs@cst.com', '54257554', '953245145', 2);
 
 --
 -- Índices para tablas volcadas
@@ -161,7 +161,7 @@ ALTER TABLE `asistencia`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

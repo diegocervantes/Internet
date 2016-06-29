@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-06-2016 a las 02:31:23
+-- Tiempo de generación: 30-06-2016 a las 01:48:10
 -- Versión del servidor: 10.1.13-MariaDB
--- Versión de PHP: 5.6.20
+-- Versión de PHP: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,10 +59,11 @@ CREATE TABLE `areas` (
 --
 
 INSERT INTO `areas` (`id`, `user`, `password`, `nombre_area`, `descripcion`, `jefe_area`) VALUES
-(1, 'juan', '321', 'Limpieza', 'Limpiar todas las salas', 'Jose Robles'),
-(2, 'INT-2016-01', 'holaA-=', 'Anatomia', 'Esta area es chevere', 'Juanito '),
-(4, 'ANT-1998-01', 'Axd09./', 'Oficinas', 'bla bla bla bla', 'Jose Bernardo'),
-(5, 'INT-2016-02', '13123AS-[', 'Carboneria', 'nada', 'Rosa Beltr?n');
+(1, 'juan', '321', 'Ninguna', 'prueba de areas', 'Jose Robles'),
+(2, 'MER-2016-01', 'holaA-=', 'Mercadotecnia', 'Encargado de satisfacen sus necesidades al crear e intercambiar bienes y servicios', 'Luis Anibal'),
+(3, 'PRO-1998-01', 'Axd09./', 'Produccion', 'Se encarga de manejar os productos de la empresa', 'Jose Bernardo'),
+(4, 'FIN-2016-02', '13123AS-[', 'Finanzas', 'Encargado de manejar el estado económico, gastos e ingresos de la empresa', 'Rosa Beltran'),
+(5, 'REH-2014-01', '1', 'Recursos Humanos', 'Esta area se encarga de organizar a los empleados en general', 'Rodrigo Begazo');
 
 -- --------------------------------------------------------
 
@@ -105,10 +106,42 @@ CREATE TABLE `empleados` (
 --
 
 INSERT INTO `empleados` (`id`, `codigo`, `user`, `nombre`, `password`, `fecha_nacimiento`, `dni`, `ingreso`, `email`, `telefono`, `celular`, `area_id`) VALUES
-(4, 'INT-45628-2016-01', 'INT-45628-2016-01', 'Pancho Rodriguez', 'aleluya123A-&gt;', '0000-00-00', '71440896', 2006, 'pancho@inigo.com', '54272222', '978767562', 0),
-(5, 'PAS-45628-2016-01', 'PAS-45628-2016-01', 'Rodrigo abd', 'asdhQ-;', '0000-00-00', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 0),
-(24, 'ASD-23435-2016-01', 'ASD-23435-2016-01', 'Mauro Diaz', 'Comexd%$12', '1997-08-26', '72345667', 2015, 'diego@cst.com', '54234354', '953245345', 1),
-(25, 'AED-21435-2016-01', 'AED-21435-2016-01', 'Diego Cervantes', '19Dc#$56$xfa', '1997-08-26', '77151234', 2015, 'diegoxs@cst.com', '54257554', '953245145', 2);
+(1, '123', '', '', '', '1988-06-29', '0', 0000, '', '0', '0', 0),
+(2, '123', '', '', '', '1990-10-12', '0', 0000, '', '0', '0', 0),
+(3, '312', '312', '312', '312', '1995-07-30', '312', 0000, '312', '312', '312', 0),
+(4, 'MER-45628-2016-01', 'MER-45628-2016-01', 'Pancho Rodriguez', 'ale123A-&gt;', '1989-01-13', '71440896', 2006, 'pancho@inigo.com', '54272222', '978767562', 5),
+(5, 'PRO-98264-2016-01', 'PRO-98264-2016-01', 'Rodrigo Alendro', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 2),
+(6, 'FIN-82736-2016-01', 'FIN-82736-2016-01', 'Raul Loyola', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(7, 'REH-28356-2016-01', 'REH-28356-2016-01', 'Alejandro Valdivia', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(8, 'MER-28374-2016-01', 'MER-28374-2016-01', 'Natalia Guitierrez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(9, 'MER-19260-2016-01', 'MER-19260-2016-01', 'Lucia Maraniego', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(10, 'MER-01723-2016-01', 'MER-01723-2016-01', 'Bruno Sandres', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(11, 'PRO-28374-2016-01', 'PRO-28374-2016-01', 'Ignacio Bustinza', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 2),
+(12, 'PRO-27364-2016-01', 'PRO-27364-2016-01', 'Patricio Valderrama', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 2),
+(13, 'PRO-36472-2016-01', 'PRO-36472-2016-01', 'Ana Lucia Rondon', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 2),
+(14, 'FIN-19273-2016-01', 'FIN-19273-2016-01', 'Jimena Albarado', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(15, 'FIN-10254-2016-01', 'FIN-10254-2016-01', 'Sandra Zegarra', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(16, 'FIN-15351-2016-01', 'FIN-15351-2016-01', 'Samuel Carpio', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(17, 'FIN-11428-2016-01', 'FIN-11428-2016-01', 'David Jimenez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(18, 'REH-10259-2016-01', 'REH-10259-2016-01', 'Daniela Bustos', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(19, 'REH-12321-2016-01', 'REH-12321-2016-01', 'Gabriela Hernandez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(20, 'REH-10323-2016-01', 'REH-10323-2016-01', 'Juan Fernandez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(21, 'MER-11972-2016-01', 'MER-11972-2016-01', 'Michell Gomez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(22, 'MER-02642-2016-01', 'MER-02642-2016-01', 'Luisa Bedoya', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(23, 'MER-11923-2016-01', 'MER-11923-2016-01', 'Anabel Lazo', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(24, 'REH-12321-2016-01', 'REH-12321-2016-01', 'Ramiro Guitierrez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(25, 'REH-12325-2016-01', 'REH-12325-2016-01', 'Hernan Salvador', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(26, 'PRO-10982-2016-01', 'PRO-10982-2016-01', 'Susana Alatrista', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 2),
+(27, 'PRO-10442-2016-01', 'PRO-10442-2016-01', 'Milagros Moscozo', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 2),
+(28, 'MER-98524-2016-01', 'MER-98524-2016-01', 'Robert Alaya', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(29, 'MER-97523-2016-01', 'MER-97523-2016-01', 'Carlos Lindo', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(30, 'MER-76232-2016-01', 'MER-76232-2016-01', 'Luis Sanchez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(31, 'MER-89654-2016-01', 'MER-89654-2016-01', 'Manuel Bejarano', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 5),
+(32, 'FIN-27364-2016-01', 'FIN-27364-2016-01', 'Isabel Quiroz', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(33, 'FIN-86374-2016-01', 'FIN-86374-2016-01', 'Rodrigo Juarez', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(34, 'FIN-28462-2016-01', 'FIN-28462-2016-01', 'Juan Beltran', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 3),
+(35, 'REH-28646-2016-01', 'REH-28646-2016-01', 'Angel Cano', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4),
+(36, 'REH-28309-2016-01', 'REH-28309-2016-01', 'Jose Talavera', 'asdhQ-;', '1993-10-13', '23231231', 2006, 'c2089930@trbvn.com', '54272798', '976782309', 4);
 
 --
 -- Índices para tablas volcadas
@@ -124,7 +157,9 @@ ALTER TABLE `admin`
 -- Indices de la tabla `areas`
 --
 ALTER TABLE `areas`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `id_2` (`id`);
 
 --
 -- Indices de la tabla `asistencia`
@@ -151,7 +186,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `asistencia`
 --
@@ -161,7 +196,7 @@ ALTER TABLE `asistencia`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
